@@ -1,3 +1,4 @@
+const canvas = document.getElementById("canvas");
 const decreaseButton = document.getElementById("decrease");
 const increaseButton = document.getElementById("increase");
 
@@ -5,7 +6,7 @@ const resetButton = document.getElementById("reset");
 const colorSwitch = document.getElementById("color");
 const sizeCounter = document.getElementById("size");
 
-const canvas = document.getElementById("canvas");
+
 
 const ctx = canvas.getContext("2d");
 
@@ -68,7 +69,7 @@ decreaseButton.addEventListener("click", () => {
     if (size < 5) {
         size = 5;
     }
-    Counter();
+    updateSizeCounter();
 });
 /*increases the size of the drawing line*/
 increaseButton.addEventListener("click", () => {
@@ -76,7 +77,7 @@ increaseButton.addEventListener("click", () => {
     if (size > 50) {
         size = 50;
     }
-    Counter();
+    updateSizeCounter();
 });
 
 /*changes color of drawing line*/
